@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MenuClose from "../MenuClose";
-import Company from "./Company";
-import Features from "./Features";
+
 import "./MenuModal.css";
 import Accordion from "react-bootstrap/Accordion";
 
