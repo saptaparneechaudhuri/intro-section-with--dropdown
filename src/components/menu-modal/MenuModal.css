@@ -1,0 +1,167 @@
+@import "../../App.css";
+
+.menu-close {
+  display: none;
+}
+
+.button-wrapper {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-modal.active {
+    visibility: visible;
+    background-color: var(--color-white);
+
+    z-index: 19;
+    width: 70vw;
+  }
+
+  .menu-modal-wrapper {
+    display: none;
+  }
+
+  .menu-modal.active .menu-modal-wrapper {
+    height: 100%;
+    display: block;
+    /* display: grid;
+    grid-template-columns: 1fr 5rem;
+    grid-template-rows: 5rem repeat(7, minmax(min-content, 2rem));
+    grid-gap: 1rem;
+    align-items: start; */
+  }
+
+  .menu-item {
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.4rem;
+    color: var(--color-medium-gray);
+    font-weight: 700;
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    grid-column: 2 / -1;
+    align-self: center;
+    /* grid-row: 1 / 2; */
+  }
+
+  .button-wrapper.full-width .btn {
+    background-color: var(--color-white);
+    width: 100%;
+
+    border-radius: 1rem;
+    color: var(--color-medium-gray);
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 1rem 8rem;
+  }
+
+  .button-wrapper.full-width {
+    /* background-color: aqua; */
+    width: 100%;
+
+    visibility: visible;
+  }
+
+  .menu-modal .register-btn {
+    width: 0;
+    visibility: hidden;
+    transition: all 2s ease;
+
+    /* margin-left: 0.5rem; */
+  }
+
+  .menu-modal .login-btn {
+    width: 0;
+    visibility: hidden;
+    transition: all 2s ease;
+
+    /* margin-left: 6rem; */
+  }
+
+  .menu-modal--1 {
+    margin-top: 30%;
+
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 3; */
+  }
+
+  .button-wrapper.full-width .register-btn {
+    visibility: visible;
+
+    border: 1px solid var(--color-black);
+    width: 90%;
+
+    /* margin-left: 0.5rem; */
+  }
+
+  .button-wrapper.full-width .login-btn {
+    visibility: visible;
+    border: none;
+    width: 100%;
+
+    /* margin-left: 6rem; */
+  }
+
+  .panel {
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .menu-item h2 {
+    border: none;
+    background-color: var(--color-white);
+  }
+
+  .menu-item button {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    padding: none;
+    background-color: var(--color-white);
+  }
+
+  .menu-item .accordion-button {
+    padding: 0;
+  }
+
+  .menu-item .accordion-button::after {
+    background-image: url("../../../public/images/icon-arrow-down.svg");
+    background-position: center;
+
+    margin-left: 0;
+  }
+
+  .accordion-container {
+    margin-top: 8rem;
+  }
+
+  .menu-item .accordion-button:not(.collapsed) {
+    color: var(--color-medium-gray);
+    background-color: var(--color-white);
+    box-shadow: none;
+  }
+  .menu-item .accordion-button:not(.collapsed)::after {
+    background-image: url("../../../public/images/icon-arrow-down.svg");
+    transform: var(--bs-accordion-btn-icon-transform);
+
+    margin-left: 0.5rem;
+  }
+}

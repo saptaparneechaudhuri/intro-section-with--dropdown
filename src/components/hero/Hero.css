@@ -1,0 +1,33 @@
+@import "../../App.css";
+
+.hero {
+  /* background-color: aqua; */
+  background-image: url("../../../public/images/image-hero-desktop.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 9 / span 5;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 100%;
+  /* transform: translateX(4rem); */
+  /* max-height: 85vh; */
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    grid-column: 1 /-1;
+    grid-row: 2 / 3;
+    align-self: start;
+    /* height: 50%; */
+    background-image: url("../../../public/images/image-hero-mobile.png");
+    background-size: cover;
+  }
+}
