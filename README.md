@@ -22,6 +22,8 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ![](./screenshot-1.jpg)
 ![](./screenshot-2.jpg)
+![](./screenshot-5.jpg)
+
 ![](./screenshot-3.jpg)
 ![](./screenshot-4.jpg)
 
